@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<title>showRoom</title>
+		 <link href="http://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+		<style>
+			* {
+				margin: 0;
+				padding: 0;
+			}
+
+			body {
+				overflow: hidden;
+			}
+			li{
+				margin-left: 10px;
+				border: 1px solid cornflowerblue;
+				border-radius: 90px;
+				width: 90px;
+				height: 90px;
+				text-align: center;
+				line-height: 90px;
+			}
+
+
+        .bar6 input {
+            border: 2px solid #516c9e;
+            border-radius: 5px;
+            background: transparent;
+            top: 0;
+            right: 0;
+            color: #FFFFFF;
+        }
+        .bar6 button {
+            background: #516c9e;
+            border-radius: 0 5px 5px 0;
+            width: 60px;
+            top: 0;
+              right: -15px;
+  			  height: 45px;
+        }
+        .bar6 button:before {
+            content: "搜索";
+            font-size: 13px;
+            color: #FFFFFF;
+        }
+          div.search {padding: 30px 0;}
+
+        p {
+            position: relative;
+            width: 300px;
+            margin: 0 auto;
+            top: 16px;
+        }
+
+        input, button {
+            border: none;
+            outline: none;
+        }
+
+        input {
+            width: 100%;
+            height: 42px;
+            padding-left: 13px;
+        }
+
+        button {
+            height: 42px;
+            width: 42px;
+            cursor: pointer;
+            position: absolute;
+        }
+		</style>
+		<script src="build/three.js"></script>
+		<script src="js/loaders/DDSLoader.js"></script>
+		<script src="js/loaders/MTLLoader.js"></script>
+		<script src="js/loaders/OBJLoader.js"></script>
+		<script src="js/libs/tween.min.js"></script>
+		<script src="js/controls/OrbitControls.js"></script>
+		<!--<script src="js/controls/TrackballControls.js"></script>-->
+		<script src="js/modifiers/BufferSubdivisionModifier.js"></script>
+		<script src="js/libs/stats.min.js"></script>
+		<script src="build/jquery-1.9.1.js"></script>
+	</head>
+
+	<body>
+		<canvas id="cc" style="width: 100%; height: 100%;"></canvas>
+		<ul style="position: fixed; right: 20%; top: 20px; list-style: none; color: #FFFFFF; display: flex;">
+			<li id="topPos">上帝视角</li>
+			<li id="fontPos">特殊视角</li>
+			<li id="leftPos">视角1</li>
+			<li id="rightPos">视角2</li>
+			<li id="restPos">重置位置</li>
+			<li id="restHide">隐藏楼顶</li>
+			<li id="isRotation">旋转</li>
+			<li id="addP">增加服务器</li>
+			<li id="delP">删除服务器</li>
+			<li id="wind">送风</li>
+			<!--<li id="">面积测算</li>
+			<li id="">体积测算</li>
+			<li id="">压力测算</li>
+			<li id="">后期处理</li>
+			<li id="">涂鸦</li>-->
+
+
+		</ul>
+		<div class="search bar6" style="position: absolute; right:37px; top: 0; z-index: 99;">
+        <p>
+            <input id="inputVal" type="text" placeholder="请输入您要查找的服务器序号...">
+            <button type="submit"></button>
+        </p>
+    </div>
+	</body>
+	<script src="build/show.js"></script>
+</html>
